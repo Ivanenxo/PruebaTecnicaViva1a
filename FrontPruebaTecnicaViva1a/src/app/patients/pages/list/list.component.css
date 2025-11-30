@@ -1,0 +1,41 @@
+/* Contenedor general */
+.filters-container {
+  background: #f8f9fa;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e3e3e3;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs */
+.filters-container input {
+  min-width: 220px;
+}
+
+/* Botones */
+.filters-container button {
+  height: 38px;
+}
+
+/* Título y botón crear */
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header-actions h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Tarjeta general */
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}

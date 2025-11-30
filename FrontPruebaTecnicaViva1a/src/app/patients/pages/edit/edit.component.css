@@ -1,0 +1,58 @@
+/* Card principal */
+.card {
+  font-family: 'Arial', sans-serif; /* tipo de letra */
+  color: rgb(22, 157, 161); /* color del texto general */
+  background-color: rgba(240, 240, 240, 0.9); /* gris muy claro con transparencia */
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto; /* centra la card horizontalmente */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* sombra suave */
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+/* Título */
+.card h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Formulario */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Campos del formulario */
+.field label {
+  font-weight: bold;
+}
+
+input.p-inputtext, input[type="date"], input[type="email"] {
+  width: 100%;
+}
+
+/* Botones */
+.flex-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+button.p-button {
+  min-width: 120px;
+}
+
+/* Mensajes de error */
+.p-error {
+  font-size: 0.8rem;
+}

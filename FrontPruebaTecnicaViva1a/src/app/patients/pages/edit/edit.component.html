@@ -1,0 +1,98 @@
+
+<p-dialog
+[(visible)]="loading"
+[modal]="true"
+[closable]="false"
+[showHeader]="false"
+[dismissableMask]="false"
+[style]="{width: '200px', textAlign: 'center', padding: '1rem'}">
+
+<div class="spinner-container">
+    <p-progressSpinner [style]="{width: '50px', height: '50px'}"></p-progressSpinner>
+    <p style="margin-top: 1rem; font-weight: bold;">Procesando operación...</p>
+</div>
+
+</p-dialog>
+
+<button pButton
+    label="Volver"
+    routerLink="/patients/list"
+    class="p-button-success p-button-sm">
+</button>
+
+<div class="card p-4">
+<h2>Crear Paciente</h2>
+
+<form (ngSubmit)="editPatient()" #patientForm="ngForm" class="form-container">
+<div class="p-fluid grid gap-3">
+
+
+  <div class="field">
+    <label for="documentType">Tipo de Documento*</label>
+    <p-dropdown
+        name="documentType"
+        [options]="documentTypes"
+        [(ngModel)]="patient.documentType"
+        placeholder="Seleccione un tipo"
+        optionLabel="value"
+        optionValue="value"
+        [showClear]="true"
+        [disabled]="true"
+        id="documentType">
+    </p-dropdown>
+  </div>
+
+
+  <div class="field col-12 md:col-6">
+    <label for="documentNumber">Número de Documento</label>
+    <input pInputText id="documentNumber" [disabled]="true"  name="documentNumber" [(ngModel)]="patient.documentNumber" required />
+  </div>
+
+
+  <div class="field col-12 md:col-6">
+    <label for="firstName">Nombre</label>
+    <input pInputText id="firstName" name="firstName" [(ngModel)]="patient.firstName" required />
+  </div>
+
+
+  <div class="field col-12 md:col-6">
+    <label for="lastName">Apellido</label>
+    <input pInputText id="lastName" name="lastName" [(ngModel)]="patient.lastName" required />
+  </div>
+
+
+  <div class="field col-12 md:col-6">
+    <label for="birthDate">Fecha de Nacimiento</label>
+    <input pInputText id="birthDate" name="birthDate" [(ngModel)]="patient.birthDate" type="date" required />
+  </div>
+
+
+  <div class="field col-12 md:col-6">
+    <label for="phoneNumber">Teléfono</label>
+    <input pInputText id="phoneNumber" name="phoneNumber" [(ngModel)]="patient.phoneNumber" />
+  </div>
+
+
+  <div class="field col-12 md:col-6">
+    <label for="email">Email</label>
+    <input pInputText id="email" name="email" [(ngModel)]="patient.email" type="email" />
+  </div>
+
+</div>
+
+
+<div class="flex-buttons">
+  <button pButton type="submit"
+          label="Guardar"
+          class="p-button-success"
+          [disabled]="patientForm.invalid">
+  </button>
+  <button pButton type="button"
+          label="Cancelar"
+          class="p-button-secondary"
+          routerLink="/patients">
+  </button>
+</div>
+
+</form>
+</div>
