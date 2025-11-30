@@ -50,7 +50,7 @@ export class CreateComponent implements OnInit {
         // Mostrar SweetAlert
         Swal.fire({
           icon: 'success',
-          title: 'Paciente creados',
+          title: 'Paciente creado',
           text: `El paciente ${this.patient.firstName} ${this.patient.lastName} fue creado correctamente`,
           confirmButtonText: 'Aceptar'
         }).then(() => {
